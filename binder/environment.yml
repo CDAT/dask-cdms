@@ -1,0 +1,44 @@
+name: binder
+channels:
+  - cdat/label/unstable
+  - cdat/label/nightly
+  - cdat
+  - conda-forge
+  - defaults
+dependencies:
+  - wget
+  - zarr
+  - xarray
+  - pytest
+  - libcf
+  - distarray
+  - dask
+  - dask-kubernetes
+  - distributed
+  - kubernetes
+  - cdtime
+  - cdutil
+  - genutil
+  - libcdms
+  - cdat_info
+  - numpy
+  - esmpy
+  - libdrs_f
+  - pyopenssl
+  - requests
+  - lazy-object-proxy
+  - cdms2
+  - jupyter
+  - jupyterlab=0.35
+  - jupyterlab_launcher
+  - jupyter_client
+  - ipywidgets
+  - graphviz
+  - bokeh
+  - rasterio
+  - vcs
+  - numba
+  - myproxyclient
+  - netcdf4
+  - scipy
+
