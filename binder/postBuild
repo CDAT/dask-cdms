@@ -1,5 +1,5 @@
 #!/bin/bash
-!ln -s $CODNA_DIR/lib/libLLVM-3.3.so $CONDA_DIR/lib/libLLVM.so
+ln -s $CODNA_DIR/lib/libLLVM-3.3.so $CONDA_DIR/lib/libLLVM.so
 jupyter serverextension enable --py nbserverproxy --sys-prefix
 jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                              @jupyterlab/hub-extension@0.12 \
