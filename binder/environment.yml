@@ -41,4 +41,5 @@ dependencies:
   - myproxyclient
   - netcdf4
   - scipy
+  - julia
 
