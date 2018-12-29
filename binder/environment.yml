@@ -44,5 +44,6 @@ dependencies:
   - julia
   - llvm
   - mesalib
+  - nbserverproxy
 
 
