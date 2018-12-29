@@ -1,5 +1,4 @@
 #!/bin/bash
-ln -s $CODNA_DIR/lib/libLLVM-3.3.so $CONDA_DIR/lib/libLLVM.so
 jupyter serverextension enable --py nbserverproxy --sys-prefix
 jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                              @jupyterlab/hub-extension@0.12 \
@@ -8,14 +7,13 @@ jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                              dask-labextension
 
 
+find $CONDA_PREFIX/lib/ -name "libLLVM*" -exec ln -s {} $CONDA_PREFIX/lib/libLLVM.so \;
+juliacmd=`echo 'ENV["LD_LIBRARY_PATH"]="CONDA_PREFIX/lib"' |sed "s%CONDA_PREFIX%${CONDA_PREFIX}%";`
+juliacmd=$juliacmd';ENV["JUPYTER"]="jupyter"; using Pkg; Pkg.add(["IJulia", "MeshArrays"]); Pkg.build("ZMQ");'
+
 # Julia stuff
 # https://stackoverflow.com/questions/51272077/install-julia-packages-via-command-line/51273146
 # https://github.com/JuliaLang/IJulia.jl
 # https://github.com/JuliaLang/IJulia.jl/issues/717
-julia -e 'ENV["LD_LIBRARY_PATH"]="/srv/conda/lib";
-          ENV["JUPYTER"]="jupyter";
-          using Pkg;
-          Pkg.add(["IJulia", "MeshArrays"]);
-          Pkg.build("ZMQ");'
+julia -e "$juliacmd"
 
-#EOF
