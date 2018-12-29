@@ -14,7 +14,7 @@
               "type": "tab-area",
               "currentIndex": 0,
               "widgets": [
-                "application-mimedocuments:Readme.md:Markdown Preview"
+                "application-mimedocuments:README.md:Markdown Preview"
               ]
             },
             {
@@ -44,7 +44,7 @@
           ]
         },
         "mode": "multiple-document",
-        "current": "application-mimedocuments:Readme.md:Markdown Preview"
+        "current": "application-mimedocuments:README.md:Markdown Preview"
       },
       "left": {
         "collapsed": false,
@@ -80,9 +80,9 @@
     "dask-dashboard-launcher": {
       "url": "DASK_DASHBOARD_URL"
     },
-    "application-mimedocuments:Readme.md:Markdown Preview": {
+    "application-mimedocuments:README.md:Markdown Preview": {
       "data": {
-        "path": "Readme.md",
+        "path": "README.md",
         "factory": "Markdown Preview"
       }
     }
