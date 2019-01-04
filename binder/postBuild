@@ -1,5 +1,5 @@
 #!/bin/bash
-cat << END >  ${CONDA_PREFIX}/etc/conda/activate.d/cdms-activate.sh
+cat << END >  ${CONDA_DIR}/etc/conda/activate.d/cdms-activate.sh
 #!/bin/bash
 export UVCDAT_ANONYMOUS_LOG="NO"
 END
