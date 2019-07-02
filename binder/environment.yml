@@ -1,6 +1,5 @@
 name: binder
 channels:
-  - cdat/label/unstable
   - cdat/label/nightly
   - cdat
   - conda-forge
