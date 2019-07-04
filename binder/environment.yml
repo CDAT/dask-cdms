@@ -210,6 +210,16 @@ dependencies:
   - zipp
   - zlib
   - zstd
+  - numba
+  - netcdf4
+  - scipy
+  - julia
+  - llvm
+  - mesalib
+  - nbserverproxy
+  - nodejs
+  - zarr
+  - xarray
   - pip:
     - cdms2
     - mv2
