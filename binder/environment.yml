@@ -27,9 +27,7 @@ dependencies:
   - requests
   - lazy-object-proxy
   - jupyter
-  - jupyterlab=0.35
-  - jupyterlab_launcher
-  - jupyter_client
+  - jupyterlab
   - ipywidgets
   - graphviz
   - bokeh
@@ -43,7 +41,10 @@ dependencies:
   - llvm
   - mesalib
   - nbserverproxy
+  - python=3.7
+  - tornado=5.1.1
   - pip:
+    - dask-labextension
     - cdms2
     - mv2
     - regrid2
